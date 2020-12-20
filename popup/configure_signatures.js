@@ -27,8 +27,6 @@ signatureTextarea.addEventListener('input', markChange);
 updateButton.addEventListener('click', updateSignature);
 resetButton.addEventListener('click', resetSignature);
 
-console.log("Test");
-
 // Log an error to the console
 function onError(error) {
     console.log(error);
