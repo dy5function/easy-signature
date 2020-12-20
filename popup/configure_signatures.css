@@ -1,0 +1,54 @@
+html, body {
+    width: 500px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.boxsizingBorder {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+label, textarea {
+    display: block;
+}
+
+#signature {
+    width: 100%;
+}
+
+#signature-controls {
+    width: 500px;
+    text-align: center;
+    position: relative;
+}
+
+.button {
+    margin: 3% auto;
+    padding: 4px;
+    border: none;
+    border-radius: 3px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.signature-control {
+    width: 200px;
+}
+
+#update {
+    background-color: rgb(206, 238, 206);
+    color: black;
+}
+
+#reset {
+    background-color: rgb(245, 184, 184);
+    color: black;
+}
+
+.hidden {
+    display: none;
+}

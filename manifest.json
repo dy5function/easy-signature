@@ -1,0 +1,12 @@
+{
+    "name": "Easy Signature",
+    "description": "Insert Email-like signatures into any text field.",
+    "manifest_version": 2,
+    "version": "1.0",
+
+    "browser_action": {
+        "default_icon": "icons/sign-48.png",
+        "default_title": "Easy Signature",
+        "default_popup": "popup/configure_signatures.html"
+    }
+}
