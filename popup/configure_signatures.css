@@ -14,7 +14,15 @@ label, textarea {
 }
 
 #signature {
-    width: 100%;
+    width: 490px;
+}
+
+.changed {
+    border: 5px solid lightblue;
+}
+
+.unchanged {
+    border: 5px solid rgb(206, 238, 206);
 }
 
 #signature-controls {
