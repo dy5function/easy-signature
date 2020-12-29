@@ -25,8 +25,10 @@ browser.runtime.onMessage.addListener((message) => {
         // are the only multiline input fields.
         if (targetElement.tagName.toLowerCase() == "textarea" ) {
             browser.storage.local.get("signature").then((results) => {
-                // Add line breaks before the signature for better readability
-                targetElement.value += '\r\n\r\n' + results['signature'];
+                if (typeof results['signature'] !== 'undefined' &&
+                    results['signature'] !== '') {
+                    targetElement.value += '\r\n\r\n' + results['signature'];
+                }
             });
         }
         // Print a log message to the console if an attempt was made to append

@@ -30,10 +30,9 @@ function onError(error) {
 
 // Initialize popup with current signature
 function initialize() {
-    var loadingSignature = browser.storage.local.get(null);
+    var loadingSignature = browser.storage.local.get('signature');
     loadingSignature.then((results) => {
-        // insert signature text
-        signatureTextarea.value = results['signature'];
+        signatureTextarea.value = (typeof results['signature'] === 'undefined' ? '' : results['signature']);
     }, onError);
 }
 
