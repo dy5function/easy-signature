@@ -19,13 +19,9 @@
 
 // Popup input elements
 var signatureTextarea = document.querySelector('#signature');
-var updateButton = document.querySelector('#update');
-var resetButton = document.querySelector('#reset');
 
 // Event listeners
-signatureTextarea.addEventListener('input', markChange);
-updateButton.addEventListener('click', updateSignature);
-resetButton.addEventListener('click', resetSignature);
+signatureTextarea.addEventListener('input', updateSignature);
 
 // Log an error to the console
 function onError(error) {
@@ -38,40 +34,16 @@ function initialize() {
     loadingSignature.then((results) => {
         // insert signature text
         signatureTextarea.value = results['signature'];
-        markUpdate();
     }, onError);
 }
 
-// Mark changes in the signature textarea
-function markChange() {
-    // This will update the styling of the textarea to indicate unstored changed
-    signatureTextarea.classList.add('changed');
-    signatureTextarea.classList.remove('unchanged');
-}
-
-// Mark update in the signature textarea
-function markUpdate() {
-    // This will update the styling of the textarea to indicate stored changes
-    signatureTextarea.classList.add('unchanged');
-    signatureTextarea.classList.remove('changed');
-}
-
-// Update button event listener
+// Update signature
 function updateSignature() {
     // get signature from textarea
     var currentSignature = signatureTextarea.value;
     var storingSignature = browser.storage.local.set({ "signature": currentSignature });
     storingSignature.then(() => {
-        markUpdate();
-    }, onError);
-}
-
-// Reser button event listener
-function resetSignature() {
-    var loadingSignature = browser.storage.local.get('signature');
-    loadingSignature.then((results) => {
-        signatureTextarea.value = results['signature'];
-        markUpdate();
+        // nothing to do
     }, onError);
 }
 

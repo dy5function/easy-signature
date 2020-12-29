@@ -1,6 +1,5 @@
 html, body {
-    width: 500px;
-    font-family: 'Roboto', sans-serif;
+    width: auto;
 }
 
 .boxsizingBorder {
@@ -9,52 +8,48 @@ html, body {
     box-sizing: border-box;
 }
 
-label, textarea {
+h1 {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 200;
+    font-size: 36px;
+}
+
+p {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+label {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
     display: block;
+    margin-bottom: 8px;
+    color: #0c0c0c;
+    font-size: 0.833rem/1.4;
 }
 
-#signature {
-    width: 490px;
+textarea {
+    display: block;
+    border-radius: 2px;
+    padding: 8px;
+    width: auto;
+    border: 1px solid rgba(12, 12, 13, 0.2);
 }
 
-.changed {
-    border: 5px solid lightblue;
+textarea::placeholder {
+    color: #737373;
+    font-size: 0.833rem/1.4;
 }
 
-.unchanged {
-    border: 5px solid rgb(206, 238, 206);
+textarea:hover {
+    border: 1px solid rgba(12, 12, 13, 0.3);
 }
 
-#signature-controls {
-    width: 500px;
-    text-align: center;
-    position: relative;
-}
-
-.button {
-    margin: 3% auto;
-    padding: 4px;
-    border: none;
-    border-radius: 3px;
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    font-size: 1em;
-    cursor: pointer;
-}
-
-.signature-control {
-    width: 200px;
-}
-
-#update {
-    background-color: rgb(206, 238, 206);
-    color: black;
-}
-
-#reset {
-    background-color: rgb(245, 184, 184);
-    color: black;
+textarea:focus {
+    border: 1px solid #0a84ff;
+    box-shadow: 0 0 0 1px #0a84ff, 0 0 0 4px rgba(10, 132, 255, 0.3);
 }
 
 .hidden {

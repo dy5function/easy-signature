@@ -3,8 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
     <link rel="stylesheet" href="configure_signatures.css"/>
   </head>
 
@@ -12,17 +11,9 @@
     <div id="popup-content">
       <h1>Easy Signature</h1>
       <p>Fill in a signature in the field below to have it available in all your favourite websites.</p>
-      <form>
-        <label for="signature">Signature</label>
-        <textarea id="signature" class="changed" name="signature" rows="5"></textarea>
-        <div id="signature-controls">
-          <div>
-            <button id="update" class="button signature-control">Update Signature</button>
-            <button id="reset" class="button signature-control">Reset Signature</button>
-          </div>
-        </div>
-      </form>
-      <p>To insert the signature either press "Ctrl + Shift + S" while editing a text field or right-click in the text field and choose "Insert Signature".</p>
+      <label for="signature">Signature</label>
+      <textarea id="signature" class="changed" name="signature" rows="5" cols="80" placeholder="Insert signature"></textarea>
+      <p>To insert the signature right-click in the text field and choose "Append Signature".</p>
     </div>
     <div id="error-content" class="hidden">
       <p>Cannot insert signature.</p>
