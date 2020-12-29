@@ -5,12 +5,24 @@
     "version": "1.0",
 
     "permissions": [
-        "storage"
+        "storage",
+        "menus"
     ],
 
     "browser_action": {
         "default_icon": "icons/sign-48.png",
         "default_title": "Easy Signature",
         "default_popup": "popup/configure_signatures.html"
-    }
+    },
+
+    "background": {
+        "scripts": ["background/signature-context-menu.js"]
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["file:///*"],
+            "js": ["content/append-signature.js"]
+        }
+    ]
 }
