@@ -10,7 +10,7 @@
     ],
 
     "browser_action": {
-        "default_icon": "icons/sign-48.png",
+        "default_icon": "icons/easy-signature-toolbar-16.svg",
         "default_title": "Easy Signature",
         "default_popup": "popup/configure_signatures.html"
     },
