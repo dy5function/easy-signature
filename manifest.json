@@ -2,7 +2,7 @@
     "name": "Easy Signature",
     "description": "Insert Email-like signatures into any text field.",
     "manifest_version": 2,
-    "version": "1.0",
+    "version": "1.0-alpha.0",
 
     "icons": {
         "16": "icons/easy-signature-16.svg"
